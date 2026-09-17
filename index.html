@@ -4,9 +4,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="https://glitch.com/favicon.ico" />
-   
+   <style>
+        * {
+            background-color: lightblue;
+            font-family: Script, cursive;
+        }
+    </style>
 
-    <title>Fortune Teller</title>
+    <title>Soulmate's Initial</title>
 
     <!-- import the webpage's stylesheet -->
     <link rel="stylesheet" href="style.css" />
@@ -14,16 +19,42 @@
   <body>
     <!-- this is the start of content -->
     <h1>
-      Fortune Teller
+      Find Your Soulmate's Initial!
     </h1>
+    <img src="locket.png" alt="A heart-shaped locket" width="250" height="250">
     <form name="fortuneTeller" id="fortuneTeller" action="fortune.html">
       <label for="namefield">Name:</label>
       <input type="text" id="namefield" name="name" placeholder="your name" required>
       <br>
-      <label for="questionfield">Question:</label>
-      <input type="text" id="questionfield" name="question" placeholder="a yes or no question">
+      <label for="questionfield">Desired Initial:</label>
+      <input type="text" id="questionfield" name="question" placeholder="the initial(s) you hope for">
       <br>
+      <label for="birthdayfield">Birthday:</label>
+      <input type="date" id="birthdayfield" name="birthday" placeholder="your birthday" min="1960-01-01" max="2013-12-31">
+      <br><br>
+      Which of the following would you say describes you? (check all that apply)
+      <br>
+      <input type="checkbox" id="opt1" name="opt1" value="Care">
+  <label for="opt1"> I'm caring</label><br>
+  <input type="checkbox" id="opt2" name="opt2" value="Humor">
+  <label for="opt2"> I have a sense of humor</label><br>
+  <input type="checkbox" id="opt3" name="opt3" value="Intelligent">
+  <label for="opt3"> I value intelligence</label>
+  <br><br>
+  Your hair shade: <br>
+  <input type="radio" id="Light" name="hair_color" value="Light">
+  <label for="Light">Light</label><br>
+  <input type="radio" id="Dark" name="hair_color" value="Dark">
+  <label for="Dark">Dark</label><br>
+  <input type="radio" id="Medium" name="hair_color" value="Medium">
+  <label for="Medium">Medium</label>
+  <br><br>
+  <label for="story">Why you want your soulmate's initial:</label>
+<textarea id="story" name="story" rows="5" cols="33">
+I want my soulmate's initial because...
+</textarea><br><br>
       <input type="submit">
+      <input type="reset">
     </form>
     <div id="fortune"></div>
   </body>

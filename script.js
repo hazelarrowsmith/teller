@@ -1,4 +1,4 @@
-let fortunes = ["no", "yes", "maybe", "probably", "unlikely", "idk", "definitely", "100%", "for sure", "nah"];
+let fortunes = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
 // Hash function
 function cyrb128(str) {
@@ -38,6 +38,6 @@ window.onload = function () {
     let prng = mulberry32(hash[0]);
     let rand = prng();
     let randomIndex = Math.floor(rand * fortunes.length);
-    document.getElementById("fortune").textContent = "Fortune: " + fortunes[randomIndex];
+    document.getElementById("fortune").textContent = "Your Soulmate's Initial: " + fortunes[randomIndex];
   }
 };
